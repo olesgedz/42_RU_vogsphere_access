@@ -1,29 +1,29 @@
-# 42_vogsphere_access
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcolundrum%2F42_vogsphere_access.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcolundrum%2F42_vogsphere_access?ref=badge_shield)
+# 42 RU Remote Vogsphere Access Setup
+##Setup Kerberos &amp; Git access of School 21
 
-##Kerberos &amp; Git access of 42's school
+To setup access to your git repos on vogsphere, (only works on LInux / OSX)
 
-A script that make all stuff necessary to access to the vogsphere from GNU/Linux or OS X.
+####Clone this repo
 
-The script is documented so read it.
+####Run the shell script
 
-Fully functional ;)
+	sudo sh run.sh
 
-###Nota : xlogin = your 42's login
+(Enter system password if you need sudo previleges)
 
-###To identify you :
+####Get your kerberos ticket
 
-    kinit xlogin
-    enter your 42's password
+	kinit xloginx
 
-You are connected, now you can git clone/push/pull from/to vogsphere.
+	(xloginx represents your login id)
 
-###To close your connexion :
+####Enter your 42 password when asked to successfull authenticate.
+
+####Clone/Push/Pull from all the Vogsphere Git repos you have access to.
+
+####To close your connection :
 
     kdestroy
 
-##Welcome to the freedom to work anywhere in 42's school, outside of clusters
 
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcolundrum%2F42_vogsphere_access.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcolundrum%2F42_vogsphere_access?ref=badge_large)
+### You can now access your vogsphere outside the 42 clusters
