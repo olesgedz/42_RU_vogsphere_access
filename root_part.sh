@@ -29,12 +29,16 @@ EOF
 ### using your kerberos identification
 
 cat >> /etc/ssh/ssh_config << EOF
-Host *.21-school.ru
-     SendEnv LANG LC_*
+Host *
+   SendEnv LANG LC_*
+ForwardX11 no
+PasswordAuthentication yes
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials yes
+Host *
+    XAuthLocation /opt/X11/bin/xauth
+Host vogsphere.21-school.ru, vogsphere-exam.21-school.ru
      StrictHostKeyChecking no
-     GSSAPIAuthentication yes
-     GSSAPIDelegateCredentials yes
-     PasswordAuthentication yes
 EOF
 
 echo "root part finished !"
